@@ -16,12 +16,12 @@ export const getById = async (id) => {
 
 export const create = async (payload) => {
     const response = await axios.post(testURL,payload);
-    console.log(response);
+    console.log(response.data);
 }
 
 export const update = async (payload,id) => {
     const response = await axios.put(testURL+"/"+id, payload);
-    console.log(response);
+    console.log(response.data);
 }
 
 export const deleteTest = async (id) => {
