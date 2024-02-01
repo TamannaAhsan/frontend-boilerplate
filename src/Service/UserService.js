@@ -6,6 +6,7 @@ const userURL = baseURL + "users";
 
 export const register = async (payload) => {
     const response = await axios.post(userURL+"/register",payload);
+    console.log(response.data);
     if(response.status===200)
         localStorage.setItem("user",JSON.stringify(response.data));
     else
@@ -14,6 +15,7 @@ export const register = async (payload) => {
 
 export const login = async (payload) => {
     const response = await axios.post(userURL+"/login",payload);
+    console.log(response.data);
     if(response.status===200)
         localStorage.setItem("user",JSON.stringify(response.data));
     else
